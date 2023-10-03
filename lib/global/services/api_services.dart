@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../models/album.dart';
 
 class ApiServices {
-  Future<Album> fetchAlbum(http.Client client) async {
+  static Future<Album> fetchAlbum(http.Client client) async {
     final response = await client
         .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
 
